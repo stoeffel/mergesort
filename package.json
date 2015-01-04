@@ -1,0 +1,29 @@
+{
+  "name": "mergesort",
+  "version": "1.0.0",
+  "description": "Mergesort",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stoeffel/mergesort"
+  },
+  "keywords": [
+    "sort",
+    "mergesort",
+    "array"
+  ],
+  "author": "stoeffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/stoeffel/mergesort/issues"
+  },
+  "homepage": "http://github.com/stoeffel/mergesort",
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {}
+}
