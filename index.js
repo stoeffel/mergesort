@@ -5,12 +5,10 @@ function comparator(a, b) {
 }
 
 function left(array) {
-
   return slice.call(array, 0, array.length / 2);
 }
 
 function right(array) {
-
   return slice.call(array, array.length / 2);
 }
 
