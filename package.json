@@ -1,5 +1,5 @@
 {
-  "name": "mergesort",
+  "name": "divide-et-impera",
   "version": "1.0.0",
   "description": "Mergesort",
   "main": "index.js",

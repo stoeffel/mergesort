@@ -1,19 +1,19 @@
 mergesort
 ================
 
-[![Build Status](https://travis-ci.org/stoeffel/mergesort.svg)](https://travis-ci.org/stoeffel/mergesort) [![npm version](https://badge.fury.io/js/mergesort.svg)](http://badge.fury.io/js/mergesort)
+[![Build Status](https://travis-ci.org/stoeffel/mergesort.svg)](https://travis-ci.org/stoeffel/mergesort) [![npm version](https://badge.fury.io/js/divide-et-impera.svg)](http://badge.fury.io/js/divide-et-impera)
 > [Mergesort](http://en.wikipedia.org/wiki/Merge_sort) with complexity O(n log n).
 
 Installation
 ------------
 
-`npm install mergesort`
+`npm install  divide-et-impera`
 
 Usage
 -----
 
 ```js
-var mergesort = require('mergesort');
+var mergesort = require('divide-et-impera');
 
 // Sort an array
 mergesort([3, 1, 2, 4, 2]); // => [1, 2, 2, 3, 4]

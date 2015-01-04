@@ -21,9 +21,15 @@ describe('mergesort', function() {
     expect(mergesort([], desc)).to.eql([]);
     expect(mergesort([1], desc)).to.eql([1]);
     expect(mergesort([3, 1], desc)).to.eql([3, 1]);
-    //expect(mergesort([3, 1, 2], desc)).to.eql([3, 2, 1]);
+    expect(mergesort([3, 1, 2], desc)).to.eql([3, 2, 1]);
     expect(mergesort([3, 1, 2, 4], desc)).to.eql([4, 3, 2, 1]);
-    //expect(mergesort([3, 1, 2, 4, 2], desc)).to.eql([4, 3, 2, 2, 1]);
+    expect(mergesort([3, 1, 2, 4, 2], desc)).to.eql([4, 3, 2, 2, 1]);
     expect(mergesort([-3, 1, -2, 4, 2], desc)).to.eql([4, 2, 1, -2, -3]);
+  });
+
+  it('should not change the unsorted array', function() {
+    var unsorted = [-3, 1, -2, 4, 2];
+    expect(mergesort(unsorted, desc)).to.eql([4, 2, 1, -2, -3]);
+    expect(unsorted).to.eql([-3, 1, -2, 4, 2]);
   });
 });
