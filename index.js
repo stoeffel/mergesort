@@ -15,14 +15,14 @@ function right(array) {
 function merge(leftList, rightList, cmp) {
   
   var sorted = [];
-  var idx = 0;
 
   while(leftList.length > 0 && rightList.length > 0) {
-    if (cmp(leftList[idx], rightList[idx]) <= 0) {
+    if (cmp(leftList[0], rightList[0]) <= 0) {
       sorted.push(leftList.shift());
     } else {
       sorted.push(rightList.shift());
     }
+
   }
   
   return sorted.concat(leftList).concat(rightList);
