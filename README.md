@@ -28,4 +28,11 @@ function desc(a, b) {
   return b - a;
 }
 mergesort([3, 1, 2, 4, 2], desc); // => [4, 3, 2, 2, 1]
+
+// Use with compare.js
+var desc = require('compare.js/desc');
+var date = require('compare.js/date');
+var dates = ['01.01.2014', '30.03.2015', '18.01.2015'];
+
+mergesort(dates, desc(date('DD.MM.YYYY'))); // => ['30.03.2015', '18.01.2015', '01.01.2014']
 ```
