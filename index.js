@@ -1,37 +1,36 @@
-var slice = Array.prototype.slice;
+"use strict";
 
-function comparator(a, b) {
+
+module.exports = mergesort;
+var comparator = function (a, b) {
   return a - b;
-}
-
-function left(array) {
+};
+var slice = Array.prototype.slice;
+var left = function (array) {
   return slice.call(array, 0, array.length / 2);
-}
-
-function right(array) {
+};
+var right = function (array) {
   return slice.call(array, array.length / 2);
-}
+};
 
 function merge(leftList, rightList, cmp) {
-  
   var sorted = [];
 
-  while(leftList.length > 0 && rightList.length > 0) {
+  while (leftList.length > 0 && rightList.length > 0) {
     if (cmp(leftList[0], rightList[0]) <= 0) {
       sorted.push(leftList.shift());
     } else {
       sorted.push(rightList.shift());
     }
-
   }
-  
+
   return sorted.concat(leftList).concat(rightList);
 }
 
-module.exports = function mergesort(array, cmp) {
-
+function mergesort(array, cmp) {
   var newArray = slice.call(array);
-  var leftList, rightList;
+  var leftList = undefined,
+      rightList = undefined;
 
   cmp = cmp || comparator;
 
@@ -39,8 +38,8 @@ module.exports = function mergesort(array, cmp) {
     return newArray;
   }
 
-  leftList  = mergesort(left(newArray), cmp);
+  leftList = mergesort(left(newArray), cmp);
   rightList = mergesort(right(newArray), cmp);
 
   return merge(leftList, rightList, cmp);
-};
+}
