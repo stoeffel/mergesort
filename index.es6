@@ -7,7 +7,7 @@ let left = (array) => slice.call(array, 0, array.length / 2);
 let right = (array) => slice.call(array, array.length / 2);
 
 function merge(leftList, rightList, cmp) {
-  
+
   let sorted = [];
 
   while(leftList.length > 0 && rightList.length > 0) {
@@ -18,16 +18,13 @@ function merge(leftList, rightList, cmp) {
     }
 
   }
-  
-  return sorted.concat(leftList).concat(rightList);
+  return sorted.concat(leftList, rightList);
 }
 
-export default function mergesort(array, cmp) {
+export default function mergesort(array, cmp=comparator) {
 
   let newArray = slice.call(array);
   let leftList, rightList;
-
-  cmp = cmp || comparator;
 
   if (newArray.length <= 1) {
     return newArray;
