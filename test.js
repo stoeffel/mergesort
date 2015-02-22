@@ -6,11 +6,8 @@ var mergesort = _interopRequire(require("./index.js"));
 
 var expect = _interopRequire(require("expect.js"));
 
-
-
-
-
 function randomArray(length) {
+
   var result = [];
 
   for (var i = length; i > 0; i -= 1) {
@@ -53,6 +50,7 @@ describe("mergesort", function () {
   });
 
   it("should work with random array", function () {
+
     var array = randomArray(100);
     var sorted = mergesort(array);
 

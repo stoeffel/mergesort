@@ -1,7 +1,7 @@
 "use strict";
 
-
 module.exports = mergesort;
+
 var comparator = function (a, b) {
   return a - b;
 };
@@ -14,6 +14,7 @@ var right = function (array) {
 };
 
 function merge(leftList, rightList, cmp) {
+
   var sorted = [];
 
   while (leftList.length > 0 && rightList.length > 0) {
@@ -28,7 +29,6 @@ function merge(leftList, rightList, cmp) {
 
 function mergesort(array) {
   var cmp = arguments[1] === undefined ? comparator : arguments[1];
-
 
   var newArray = slice.call(array);
   var leftList = undefined,

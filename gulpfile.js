@@ -2,9 +2,9 @@ var gulp = require('gulp'),
   watch = require('gulp-watch'),
   rename = require('gulp-rename'),
   mocha = require('gulp-mocha'),
-  to5 = require('gulp-6to5');
+  to5 = require('gulp-babel');
 
-gulp.task('6to5', function() {
+gulp.task('babel', function() {
   return gulp.src('**/*.es6')
     .pipe(to5({
       experimental: true,
@@ -16,7 +16,7 @@ gulp.task('6to5', function() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('test', ['6to5'], function() {
+gulp.task('test', ['babel'], function() {
   return gulp.src('test.js')
     .pipe(mocha());
 });
