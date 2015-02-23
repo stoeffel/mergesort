@@ -1,10 +1,10 @@
 'use strict';
 
 
-let comparator = (a, b) => a - b;
-let slice = Array.prototype.slice;
-let left = (array) => slice.call(array, 0, array.length / 2);
-let right = (array) => slice.call(array, array.length / 2);
+const comparator = (a, b) => a - b;
+const slice = Array.prototype.slice;
+const left = (array) => slice.call(array, 0, array.length / 2);
+const right = (array) => slice.call(array, array.length / 2);
 
 function merge(leftList, rightList, cmp) {
 
