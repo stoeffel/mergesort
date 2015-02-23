@@ -1,6 +1,6 @@
 {
   "name": "divide-et-impera",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mergesort",
   "main": "index.js",
   "scripts": {
