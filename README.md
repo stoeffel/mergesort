@@ -2,7 +2,7 @@ mergesort
 ================
 
 [![Build Status](https://travis-ci.org/stoeffel/mergesort.svg)](https://travis-ci.org/stoeffel/mergesort) [![npm version](https://badge.fury.io/js/divide-et-impera.svg)](http://badge.fury.io/js/divide-et-impera)
-> [Mergesort](http://en.wikipedia.org/wiki/Merge_sort) with complexity O(n log n).
+> [Mergesort](http://en.wikipedia.org/wiki/Merge_sort) with complexity O(n log n).It uses divide and conquer paradigm. it is not an inplace algorithm means it requires a O(1) extra memory.
 
 Installation
 ------------
